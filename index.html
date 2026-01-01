@@ -18,16 +18,15 @@
   </style>
 </head>
 <body>
-
-    <span id="myarrow" class="arrow-glyph">↑</span>
-
+  <button id="toggleBtn" class="arrow-container">
+    <span class="arrow-glyph">↑</span>
+  </button>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const aro = document.getElementById('myarrow');
+      const btn = document.getElementById('toggleBtn');
         const angle = 73;
-        aro.style.transform = `rotate(${angle}deg)`;
+        btn.style.transform = `rotate(${angle}deg)`;
     });
   </script>
-</body>
-</html>
+</body></html>
