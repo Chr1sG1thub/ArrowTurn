@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ArrowTurn</title>
+    <style>
+      .arrow-container {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.3s ease; /* Smooth rotation */
+  transform-origin: center;
+}
+
+.arrow-glyph {
+  display: block;
+
+    </style>
+    <script>
+      const btn = document.getElementById('toggleBtn');
+let isRotated = false;
+
+btn.addEventListener('click', () => {
+  isRotated = !isRotated;
+  const angle = isRotated ? 180 : 0;
+  btn.style.transform = `rotate(${angle}deg)`;
+  // Optional: Toggle content visibility
+  document.getElementById('content').style.display = isRotated ? 'block' : 'none';
+});
+
+    </script>
+  </head>
+  <body>
+    <button id="toggleBtn" class="arrow-container">
+  <span class="arrow-glyph">▼</span>
+</button>
+
+  </body>
+</html>
